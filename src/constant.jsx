@@ -1,0 +1,1 @@
+export const BACKGROUND_IMAGE="https://image1.jdomni.in/banner/16102019/B9/8C/56/2DFD252A741DB5E9F7E0432169_1571219947691.jpg?output-format=webp"

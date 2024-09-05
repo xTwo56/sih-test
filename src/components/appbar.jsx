@@ -1,48 +1,49 @@
+import { useState, useEffect } from 'react';
 
-import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import { useNavigate } from 'react-router-dom';
+export const AppBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-export const AppBarFC = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
-  const navigate = useNavigate()
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="success">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            MyApp
-          </Typography>
-          <Button color="inherit"
-            onClick={handleLogin}>Login</Button>
-          <Button color="inherit"
-            onClick={handleSignup}>Sign Up</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <div
+      className={`flex  z-40 justify-between items-center text-white fixed top-0 w-full p-10 transition-all duration-300 ${
+        isScrolled ? 'bg-green-900 shadow-lg' : 'bg-transparent'
+      }`}
+    >
+      <div>
+        <ul className="flex gap-10">
+          <li className='hover:text-green-700'>HOME</li>
+          <li className='hover:text-green-700'>SERVICES</li>
+          <li className='hover:text-green-700'>ABOUT US</li>
+          <li className='hover:text-green-700'>WHY US</li>
+        </ul>
+      </div>
+      <div>
+        <h1 className='hover:text-green-700'>NINJAFARM</h1>
+      </div>
+      <div>
+        <ul className="flex gap-10">
+          <li className='hover:text-green-700'>GALLERY</li>
+          <li className='hover:text-green-700'>TESTIMONIALS</li>
+          <li className='hover:text-green-700'>CONTACT US</li>
+        </ul>
+      </div>
+     
+    </div>
   );
-
-  function handleSignup() {
-    navigate("/signup")
-  }
-
-  function handleLogin() {
-    navigate("/login")
-  }
 };
-
