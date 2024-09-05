@@ -7,7 +7,7 @@ export const Services=()=>{
          <div className="flex h-96  justify-around mt-10">
             <div className="hover:shadow-xl">
                 <div>
-                <img alt="service image 1" src={service_image2}/>
+                <img alt="service image 1" src={service_image1}/>
                 </div>
                 <div>
                 <h5>Algo Farming</h5>
@@ -19,7 +19,7 @@ export const Services=()=>{
             </div>
             <div className="hover:shadow-xl">
                 <div>
-                <img alt="service image 2" className="rounded-full w-full" src={service_image1}/>
+                <img alt="service image 2" className="rounded-full w-full" src={service_image2}/>
                 </div>
                 <div>
                 <h5>Algo Farming</h5>
@@ -31,7 +31,7 @@ export const Services=()=>{
             </div>
             <div className="hover:shadow-xl">
                 <div>
-                <img alt="service image 1" src={service_image2}/>
+                <img alt="service image 1" src={service_image3}/>
                 </div>
                 <div>
                 <h5>poutiry Farming</h5>
