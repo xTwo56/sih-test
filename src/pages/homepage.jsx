@@ -1,5 +1,6 @@
 import { BACKGROUND_IMAGE } from "../constant";
-import { AppBar } from "../components/appBar";
+import { AppBar } from "../components/appbar";
+import { Services } from "./sevices";
 export const HomePage = () => {
   return (
     <div className="">
@@ -12,7 +13,7 @@ export const HomePage = () => {
         </h1>
       </div>
        <img alt="bckground_image" className="shadow-md w-full h-[510px]"  src={BACKGROUND_IMAGE}/>
-       <img alt="bckground_image" className=" shadow-md w-full h-[510px]"  src={BACKGROUND_IMAGE}/>
+      <Services/>
     </div>
   )
 };

@@ -1,1 +1,6 @@
 export const BACKGROUND_IMAGE="https://image1.jdomni.in/banner/16102019/B9/8C/56/2DFD252A741DB5E9F7E0432169_1571219947691.jpg?output-format=webp"
+export const service_image1="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhLS8_6F8RjUsHYiWNEBGXATehR4692HW3A&s"
+export const service_image2="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSo9nvB146nclLBd6HgBL88a1Ht5VKMAHjA&s"
+export const service_image3="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbLOf9pFz9lVDaEqa1Z72rDVwquCtiTfbxYA&s"
+export const service_image4="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQapXksX5Z2xFziubzsqheVf40LwAEejSk26w&s"
+export const Aboutus_image="https://image3.jdomni.in/banner/16102019/6D/B8/EA/361D076172CB2447B88BF64E87_1571215518626.jpg?output-format=webp"
