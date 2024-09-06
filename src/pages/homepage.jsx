@@ -1,7 +1,7 @@
 import { BACKGROUND_IMAGE } from "../constant";
 import { AppBar } from "../components/appbar";
 import { Services } from "./sevices";
-export const HomePage = () => {
+ const HomePage = () => {
   return (
     <div className="">
        <AppBar/>
@@ -17,3 +17,4 @@ export const HomePage = () => {
     </div>
   )
 };
+export default HomePage

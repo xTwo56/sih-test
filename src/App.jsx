@@ -1,9 +1,10 @@
 
-import { HomePage } from "./pages/homepage"
+import HomePage  from "./pages/homepage"
 
-import {Listing} from "./pages/listing"
-import {Signup} from "./pages/Signup"
-import {Login} from "./pages/Login"
+import Listing from "./pages/listing"
+import Signup from "./pages/Signup"
+import Login from "./pages/Login"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
   return (
     <div>
 
-      <HomePage/>
+      {/* <HomePage/> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
