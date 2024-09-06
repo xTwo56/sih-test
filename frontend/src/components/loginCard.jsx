@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> c6edc2235f91b46a7467ea532b525485f4870ac5
-
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -19,6 +14,8 @@ const StyledCard = styled(Card)({
   minHeight: 300,
   padding: '20px',
   boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+  margin: 'auto',  
+  marginTop: '100px',  
 });
 
 const LoginCard = () => {
@@ -27,24 +24,22 @@ const LoginCard = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const email = emailRef.current.value
-    const password = passwordRef.current.value
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
 
-    const response = await axios.post("http://localhost:4000/api/signin", {
-      email, password
-    })
+    try {
+      const response = await axios.post("http://localhost:4000/api/signin", {
+        email,
+        password,
+      });
 
-    console.log("response: " + JSON.stringify(response));
+      console.log("response: " + JSON.stringify(response));
+    } catch (error) {
+      console.error("Error during login:", error);
+    }
   };
 
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>login</h1>
-    </div>
-  )
-}
-=======
     <StyledCard>
       <CardContent>
         <Typography variant="h5" component="div" gutterBottom>
@@ -67,7 +62,7 @@ const LoginCard = () => {
           />
           <TextField
             required
-            type="text"
+            type="password"
             label="Password"
             variant="outlined"
             inputRef={passwordRef}
@@ -82,6 +77,5 @@ const LoginCard = () => {
     </StyledCard>
   );
 };
->>>>>>> c6edc2235f91b46a7467ea532b525485f4870ac5
 
-export default LoginCard
+export default LoginCard;

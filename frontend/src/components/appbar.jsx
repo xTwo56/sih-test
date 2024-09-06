@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 export const AppBar = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -56,8 +56,8 @@ export const AppBar = () => {
           <li className='hover:text-green-700 cursor-pointer' onClick={() => scrollToSection("contact-section")}>CONTACT US</li>
           <div>
             <ul className='flex'>
-          <li className='hover:text-green-700 cursor-pointer'>LOGIN|</li>
-          <li className='hover:text-green-700 cursor-pointer'>SIGN UP</li>
+          <li className='hover:text-green-700 cursor-pointer'><Link to="/login">LOGIN|</Link></li>
+          <li className='hover:text-green-700 cursor-pointer'><Link to="/signup">SIGN UP</Link></li>
 
             </ul>
           </div>

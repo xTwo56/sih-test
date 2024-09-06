@@ -20,13 +20,11 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/listing" element={<Listing />} />
-<<<<<<< HEAD
+
           <Route path="/completed" element={<Completed/>} />
           <Route path="/farmer-details" element={<FarmerDetails/>} />
-        
-=======
-          <Route path="/completed" element={<Completed />} />
->>>>>>> c6edc2235f91b46a7467ea532b525485f4870ac5
+      
+
         </Routes>
       </BrowserRouter>
 
