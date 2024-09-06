@@ -7,6 +7,7 @@ import Login from "./pages/login"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Completed from "./pages/Completed"
 import { FarmerDetails } from "./pages/farmerDetails"
+import CreateListing from "./pages/CreateListing"
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
 
           <Route path="/completed" element={<Completed/>} />
           <Route path="/farmer-details" element={<FarmerDetails/>} />
-      
+          <Route path="/createListing" element={<CreateListing/>} />
 
         </Routes>
       </BrowserRouter>
