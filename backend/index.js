@@ -4,9 +4,11 @@ const app = express()
 const dbConnect = require('./config/db')
 const cookieParser = require('cookie-parser')
 const userRoutes = require('./routes/router')
+const cors = require('cors')
 
 app.use(cookieParser())
 app.use(express.json())
+app.use(cors())
 
 dbConnect()
 

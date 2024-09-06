@@ -1,11 +1,13 @@
 //authenticateUser
 const Farmer = require("../../models/farmer")
+const User = require("../../models/user")
 
 exports.verifyFarmer = async (req, res) => {
   try {
-    const { _id, ...farmerData } = req.body
+    const farmerData = req.body
+    console.log("farmerData: " + JSON.stringify(farmerData))
 
-    const verifiedFarmer = await Farmer.create({ farmerData })
+    const verifiedFarmer = await Farmer.create(farmerData)
 
     if (!verifiedFarmer) {
       return res.status(400).json({
@@ -15,7 +17,7 @@ exports.verifyFarmer = async (req, res) => {
     }
     const userId = req.userId
 
-    await User.update(
+    await User.updateOne(
       { _id: userId },
       {
         $set: {

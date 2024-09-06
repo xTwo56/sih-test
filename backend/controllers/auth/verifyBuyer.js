@@ -4,7 +4,8 @@ const User = require("../../models/user")
 
 exports.verifyBuyer = async (req, res) => {
   try {
-    const { buyerData } = req.body
+    const buyerData = req.body
+    console.log("buyerData: " + buyerData)
 
     const verifiedBuyer = await Buyer.create({ buyerData })
 
