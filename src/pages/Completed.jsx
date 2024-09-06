@@ -3,8 +3,7 @@ import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import wheat from "../assets/wheat.jpeg"
 
-
-function Listing() {
+function Completed() {
   // State for dynamic inputs
   const [quantity, setQuantity] = useState('');
   const [location, setLocation] = useState('');
@@ -217,15 +216,15 @@ function Listing() {
             </section>
           ))}
 
-          <div className="flex flex-wrap justify-between mt-6">
-            <button className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">APPLY</button>
-            <button className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">CHAT</button>
+          <div className="flex flex-wrap justify-evenly mt-6">
+            {/* <button className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">APPLY</button>
+            <button className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">CHAT</button> */}
             <button 
               onClick={downloadPDF} 
               className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">
-              DOWNLOAD AS PDF
+              DOWNLOAD THE CONTRACT
             </button>
-            <button className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">CHANGES IN CONTRACT</button>
+            <button className="bg-[#64d2af] text-white px-4 py-2 rounded-lg hover:bg-[#58b89b] transition">PAYMENT RECEIPT</button>
             {/* Other buttons like APPLY, CHAT, REQUEST ADDITION OF CLAUSE could be added here */}
           </div>
         </div>
@@ -234,4 +233,4 @@ function Listing() {
   );
 }
 
-export default Listing;
+export default Completed;
