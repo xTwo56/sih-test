@@ -1,5 +1,5 @@
 
-import  LoginCard  from '../components/loginCard';
+import LoginCard from '../components/loginCard';
 import Box from '@mui/material/Box';
 
 export default function Login() {
