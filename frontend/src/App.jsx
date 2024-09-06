@@ -9,6 +9,7 @@ import Completed from "./pages/Completed"
 import { FarmerDetails } from "./pages/farmerDetails"
 import CreateListing from "./pages/CreateListing"
 import FarmerProfile from "./pages/FarmerProfile"
+import { BuyerDetails } from "./pages/BuyerDetails"
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/farmer-details" element={<FarmerDetails/>} />
           <Route path="/createListing" element={<CreateListing/>} />
           <Route path="/farmerProfile" element={<FarmerProfile/>} />
+          <Route path="/buyer-details" element={<BuyerDetails/>} />
         </Routes>
       </BrowserRouter>
 
