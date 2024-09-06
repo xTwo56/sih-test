@@ -1,6 +1,7 @@
 import { BACKGROUND_IMAGE } from "../constant";
 import { AppBar } from "../components/appbar";
 import { Services } from "./sevices";
+import { AboutUsCard } from "../components/aboutUsCard";
  const HomePage = () => {
   return (
     <div className="">
@@ -14,6 +15,9 @@ import { Services } from "./sevices";
       </div>
        <img alt="bckground_image" className="shadow-md w-full h-[510px]"  src={BACKGROUND_IMAGE}/>
       <Services/>
+      <hr/>
+      <AboutUsCard/>
+      <hr/>
     </div>
   )
 };
