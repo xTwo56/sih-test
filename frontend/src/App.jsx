@@ -6,7 +6,7 @@ import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Completed from "./pages/Completed"
-
+import { FarmerDetails } from "./pages/farmerDetails"
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/listing" element={<Listing />} />
           <Route path="/completed" element={<Completed/>} />
+          <Route path="/farmer-details" element={<FarmerDetails/>} />
         
         </Routes>
       </BrowserRouter>
