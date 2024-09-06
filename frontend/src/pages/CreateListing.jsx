@@ -49,13 +49,13 @@ const CreateListing = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 md:flex-row">
+    <div className="flex flex-col min-h-screen bg-gray-100 md:flex-row ">
       {/* <div className="bg-[#c2deb6] p-4 md:pr-[5vw] shadow-md">
         <FarmerDetailCard name={farmerName} address={farmerAddress} />
       </div> */}
-      <div className="flex-1 flex items-center justify-center p-4 md:p-0">
-        <div className="max-w-md w-full p-5 bg-white rounded-lg shadow-lg">
-          <h1 className="text-2xl font-bold text-center text-gray-800 mb-4 bg-green-200 p-3 rounded-lg shadow-md">
+      <div className="flex-1 flex items-center justify-center p-4 md:p-0 ">
+        <div className="max-w-md w-full p-5 bg-white rounded-lg shadow-lg border border-green-400">
+          <h1 className="text-2xl font-bold text-center text-green-700 mb-4  p-3 rounded-lg shadow-md">
             Create a New Listing
           </h1>
           <form onSubmit={handleSubmit}>

@@ -10,6 +10,7 @@ import { FarmerDetails } from "./pages/farmerDetails"
 import CreateListing from "./pages/CreateListing"
 import FarmerProfile from "./pages/FarmerProfile"
 import { BuyerDetails } from "./pages/BuyerDetails"
+import BuyerProfile from "./pages/BuyerProfile"
 
 function App() {
 
@@ -26,9 +27,10 @@ function App() {
 
           <Route path="/completed" element={<Completed/>} />
           <Route path="/farmer-details" element={<FarmerDetails/>} />
-          <Route path="/createListing" element={<CreateListing/>} />
+          {/* <Route path="/createListing" element={<CreateListing/>} /> */}
           <Route path="/farmerProfile" element={<FarmerProfile/>} />
           <Route path="/buyer-details" element={<BuyerDetails/>} />
+          <Route path="/buyerProfile" element={<BuyerProfile/>} />
         </Routes>
       </BrowserRouter>
 
