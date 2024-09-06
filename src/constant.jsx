@@ -4,3 +4,6 @@ export const service_image2="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd
 export const service_image3="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbLOf9pFz9lVDaEqa1Z72rDVwquCtiTfbxYA&s"
 export const service_image4="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQapXksX5Z2xFziubzsqheVf40LwAEejSk26w&s"
 export const Aboutus_image="https://image3.jdomni.in/banner/16102019/6D/B8/EA/361D076172CB2447B88BF64E87_1571215518626.jpg?output-format=webp"
+export const Gallery_image1="https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=600"
+export const Gallery_image2="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2tZfi2XI_z15-8ae3L10whammIbxwuI6vA&s"
+export const Gallery_image3="https://cdn.pixabay.com/photo/2023/07/28/10/17/machinery-8154964_1280.jpg"

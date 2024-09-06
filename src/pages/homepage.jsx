@@ -2,6 +2,8 @@ import { BACKGROUND_IMAGE } from "../constant";
 import { AppBar } from "../components/appbar";
 import { Services } from "./sevices";
 import { AboutUsCard } from "../components/aboutUsCard";
+import { WHyUsCard } from "../components/whyUsCard";
+import { GalleryCard } from "../components/galleryCard";
  const HomePage = () => {
   return (
     <div className="">
@@ -18,6 +20,9 @@ import { AboutUsCard } from "../components/aboutUsCard";
       <hr/>
       <AboutUsCard/>
       <hr/>
+      <WHyUsCard/>
+      <hr/>
+      <GalleryCard/>
     </div>
   )
 };

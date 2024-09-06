@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import wheat from "../assets/wheat.jpeg"
@@ -49,7 +49,7 @@ function Completed() {
             className="w-full h-60 md:h-auto mb-4 rounded-lg shadow-lg object-cover"
           />
           <div className="bg-[#f9f9f9] p-4 rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold">Dealer's Contact Details</h2>
+            <h2 className="text-lg font-semibold">Dealer Contact Details</h2>
             <article className="text-base text-[#4a4a4a]">
               <p>Name: Satya Pal Singh</p>
               <p>Phone Number: +917894561237</p>
@@ -169,7 +169,7 @@ function Completed() {
                 <ul className="list-disc list-inside mt-2">
                   <li>The Farmer agrees to follow the cultivation practices and guidelines provided by the Buyer.</li>
                   <li>The Farmer must notify the Buyer immediately in case of any unforeseen circumstances (e.g., natural disasters) that could affect production or delivery.</li>
-                  <li>The Farmer is responsible for maintaining the crop's health and quality until the point of delivery.</li>
+                  <li>The Farmer is responsible for maintaining the crop health and quality until the point of delivery.</li>
                 </ul>
               ),
             },
@@ -177,7 +177,7 @@ function Completed() {
               title: "9. BUYER'S OBLIGATIONS",
               content: (
                 <ul className="list-disc list-inside mt-2">
-                  <li>The Buyer agrees to provide the Farmer with support as outlined under "Provision of Inputs."</li>
+                  <li>The Buyer agrees to provide the Farmer with support as outlined under Provision of Inputs</li>
                   <li>The Buyer agrees to inspect the wheat upon delivery and process payments promptly.</li>
                   <li>The Buyer may conduct regular farm visits to monitor crop progress.</li>
                 </ul>
