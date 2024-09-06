@@ -6,6 +6,7 @@ import { WHyUsCard } from "../components/whyUsCard";
 import { GalleryCard } from "../components/galleryCard";
 import {TestimonialCard} from "../components/testimonialsCard"
 import { ContactUsCard } from "../components/contactUsCard";
+import { FotterCard } from "../components/fotterCard";
  const HomePage = () => {
   return (
     <div className="">
@@ -29,6 +30,7 @@ import { ContactUsCard } from "../components/contactUsCard";
       <TestimonialCard/>
       <hr/>
       <ContactUsCard/>
+      <FotterCard/>
     </div>
   )
 };
