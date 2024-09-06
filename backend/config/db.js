@@ -5,7 +5,7 @@ require("dotenv");
 const dbConnect = () => {
   mongoose
     .connect(
-      "mongodb://localhost:27017"
+      "mongodb://localhost:27017/sih"
       , {
         useNewUrlParser: true,
         useUnifiedTopology: true,

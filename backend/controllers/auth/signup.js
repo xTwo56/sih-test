@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken')
 const User = require('../../models/user')
+require('dotenv').config()
+const JWT_SECRET = process.env.JWT_SECRET
 
 exports.signup = async (req, res) => {
   try {
@@ -14,7 +16,7 @@ exports.signup = async (req, res) => {
       })
 
       const token = jwt.sign(
-        { userId: newUser._id },
+        { userId: user._id },
         JWT_SECRET,
         { expiresIn: '1h' }
       )

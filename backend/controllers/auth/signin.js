@@ -1,7 +1,10 @@
+const jwt = require('jsonwebtoken')
 const User = require("../../models/user")
+require('dotenv').config()
+const JWT_SECRET = process.env.JWT_SECRET
 
 exports.signin = async (req, res) => {
-  const { email, password } = req.body()
+  const { email, password } = req.body
   const existingUser = await User.findOne({ email })
 
   if (!existingUser) {
@@ -19,7 +22,7 @@ exports.signin = async (req, res) => {
   }
 
   const token = jwt.sign(
-    { userId: newUser._id },
+    { userId: existingUser._id },
     JWT_SECRET,
     { expiresIn: '1h' }
   )
