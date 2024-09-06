@@ -50,6 +50,12 @@ export const BuyerDetailCard = () => {
             </h2>
           </div>
         </div>
+        <button className="flex justify-end items-center gap-2">
+            {/* <MdVerified size={20} className="text-red-500" /> */}
+            <h2 className="font-semibold hover:bg-red-700 bg-red-400 text-white rounded-lg px-2 py-1">
+              Logout
+            </h2>
+          </button>
       </div>
     </div>
   );
