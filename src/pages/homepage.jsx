@@ -4,6 +4,8 @@ import { Services } from "./sevices";
 import { AboutUsCard } from "../components/aboutUsCard";
 import { WHyUsCard } from "../components/whyUsCard";
 import { GalleryCard } from "../components/galleryCard";
+import {TestimonialCard} from "../components/testimonialsCard"
+import { ContactUsCard } from "../components/contactUsCard";
  const HomePage = () => {
   return (
     <div className="">
@@ -23,6 +25,10 @@ import { GalleryCard } from "../components/galleryCard";
       <WHyUsCard/>
       <hr/>
       <GalleryCard/>
+      <hr/>
+      <TestimonialCard/>
+      <hr/>
+      <ContactUsCard/>
     </div>
   )
 };
