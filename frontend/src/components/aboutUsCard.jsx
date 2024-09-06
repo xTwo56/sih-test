@@ -2,7 +2,7 @@ import { Aboutus_image } from "../constant";
 
 export const AboutUsCard = () => {
   return (
-    <div className="mt-20 mb-20 grid grid-cols-12 gap-8">
+    <div id="about-section"className="mt-20 mb-20 grid grid-cols-12 gap-8">
       <div className="col-span-6">
         <img
           alt="about us image card"

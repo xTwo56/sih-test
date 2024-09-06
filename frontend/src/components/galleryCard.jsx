@@ -41,7 +41,7 @@ export const GalleryCard = () => {
   }, []);
 
   return (
-    <div className="text-center mt-10 mx-10">
+    <div id="gallery-section"className="text-center mt-10 mx-10 ">
    
       <h1 className="text-green-700 font-semibold text-3xl">Gallery</h1>
       <div className="overflow-hidden mt-20 mb-20">

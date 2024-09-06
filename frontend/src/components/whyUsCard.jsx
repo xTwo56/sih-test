@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 export const WHyUsCard = () => {
   return (
-    <div className="text-center mt-20 mb-20">
+    <div id="why-us-section" className="text-center mt-20 mb-20">
       <h1 className="text-green-700 font-semibold text-3xl ">Why Us </h1>
       <div className=" flex justify-around mt-10 gap-20">
         <div  className="text-center flex flex-col items-center">

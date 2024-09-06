@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
 
-      {/* <HomePage/> */}
+    
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -21,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/listing" element={<Listing />} />
           <Route path="/completed" element={<Completed/>} />
+        
         </Routes>
       </BrowserRouter>
 

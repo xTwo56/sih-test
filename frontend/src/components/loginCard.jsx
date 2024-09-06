@@ -1,9 +1,9 @@
-import React from 'react'
+
 
 const  LoginCard = () => {
   return (
     <div>
-      
+      <h1>login</h1>
     </div>
   )
 }

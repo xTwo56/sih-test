@@ -24,7 +24,7 @@ export const TestimonialCard = () => {
   }, []);
 
   return (
-    <div
+    <div id="testimonials-section"
       className="relative h-screen bg-fixed bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: `url(${Aboutus_image})`,

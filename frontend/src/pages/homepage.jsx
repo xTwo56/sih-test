@@ -8,6 +8,7 @@ import {TestimonialCard} from "../components/testimonialsCard"
 import { ContactUsCard } from "../components/contactUsCard";
 import { FotterCard } from "../components/fotterCard";
  const HomePage = () => {
+  
   return (
     <div className="">
        <AppBar/>

@@ -2,7 +2,7 @@ import { service_image1, service_image2, service_image3, service_image4 } from "
 
 export const Services = () => {
   return (
-    <div className="mt-20 mb-10 mx-8">
+    <div id="service-section" className="mt-20 mb-10 mx-8">
       <h1 className="text-green-700 text-4xl text-center">Services</h1>
       <div className="flex h-auto justify-around mt-10 gap-6">
        

@@ -1,6 +1,6 @@
 export const ContactUsCard = () => {
     return (
-      <div className="text-center mt-10">
+      <div id="contact-section" className="text-center mt-10">
         <h1 className="text-green-700 text-3xl font-semibold mb-10">Contact Us</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10">
          
