@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
+import axios from 'axios';
 
 const StyledCard = styled(Card)({
   maxWidth: 400,
@@ -17,11 +18,19 @@ const StyledCard = styled(Card)({
 });
 
 const LoginCard = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Submission logic 
-    console.log("Form submitted");
+    const email = emailRef.current.value
+    const password = passwordRef.current.value
+
+    const response = await axios.post("http://localhost:4000/api/signin", {
+      email, password
+    })
+
+    console.log("response: " + JSON.stringify(response));
   };
 
   return (
@@ -42,6 +51,7 @@ const LoginCard = () => {
             type="email"
             label="Email"
             variant="outlined"
+            inputRef={emailRef}
             fullWidth
           />
           <TextField
@@ -49,6 +59,7 @@ const LoginCard = () => {
             type="text"
             label="Password"
             variant="outlined"
+            inputRef={passwordRef}
             fullWidth
           />
 
