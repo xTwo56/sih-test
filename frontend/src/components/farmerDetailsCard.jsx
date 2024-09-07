@@ -3,12 +3,23 @@ import { FiMessageSquare } from "react-icons/fi";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
 import axios from "axios"
+import { useEffect } from "react";
+
 
 export const FarmerDetailCard = () => {
 
-  const response = axios.post("/getUserDetails", {
+  async function getUser() {
 
-  })
+    const response = await axios.get("http://localhost:4000/api/getUserDetails", {
+      withCredentials: true
+    })
+    console.log("response: " + JSON.stringigy(response))
+  }
+
+  useEffect(() => {
+    getUser()
+  }, [])
+
   return (
     <div className="flex ml-10 gap-10 max-h-screen  items-start w-1/4 mt-20">
       <div className="flex flex-col gap-8">

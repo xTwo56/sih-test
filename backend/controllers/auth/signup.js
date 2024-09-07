@@ -21,16 +21,16 @@ exports.signup = async (req, res) => {
         JWT_SECRET,
         { expiresIn: '1h' }
       )
+      console.log("token creation" + token)
 
       res.cookie('token', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
         maxAge: 3600000
-      });
+      })
 
       return res.status(200).json({
         success: true,
-        msg: "user created successfully"
+        msg: "user created"
       })
     }
 

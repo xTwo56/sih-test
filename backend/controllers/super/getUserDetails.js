@@ -2,11 +2,12 @@
 const Farmer = require("../../models/farmer")
 const User = require("../../models/user")
 
-exports.getFarmerDetails = async (req, res) => {
+exports.getUserDetails = async (req, res) => {
 
   const userId = req.userId
+  console.log("userId")
 
-  const { isVerified, farmerId, buyerId } = await User.findOne({
+  const { isVerified, farmerId, buyerId, name, address } = await User.findOne({
     _id: userId
   })
 
