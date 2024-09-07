@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -22,66 +22,86 @@ const StyledCard = styled(Card)({
 });
 
 const SignUpCard = () => {
-  const [role, setRole] = useState('farmer');
+  const [role, setRole] = useState('buyer');
 
   const handleRoleChange = (event) => {
     setRole(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const emailRef = useRef()
+  const passwordRef = useRef()
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     // Submission logic 
-    console.log("Form submitted");
+    const email = emailRef.current.value
+    const password = passwordRef.current.value
+
+    try {
+      const response = await axios.post("http://localhost:4000/api/signup", {
+        email,
+        password,
+        role
+      });
+
+      console.log("response: " + JSON.stringify(response));
+    } catch (error) {
+      console.error("Error during login:", error);
+
+      console.log("email: " + email);
+    };
+
+    return (
+      <StyledCard>
+        <CardContent>
+          <Typography variant="h5" component="div" gutterBottom>
+            Sign Up
+          </Typography>
+          <Box
+            component="form"
+            noValidate
+            autoComplete="off"
+            onSubmit={handleSubmit}
+            sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
+          >
+            <TextField
+              required
+              type="email"
+              label="Email"
+              variant="outlined"
+              inputRef={emailRef}
+              fullWidth
+            />
+
+            <TextField
+              required
+              type="text"
+              label="Password"
+              variant="outlined"
+              inputRef={passwordRef}
+              fullWidth
+            />
+
+            <FormControl component="fieldset">
+              <FormLabel color='black' component="legend">Role</FormLabel>
+              <RadioGroup
+                name="role"
+                value={role}
+                onChange={handleRoleChange}
+                row
+              >
+                <FormControlLabel value="farmer" control={<Radio color='success' />} label="Farmer" />
+                <FormControlLabel value="buyer" control={<Radio color='success' />} label="Buyer" />
+              </RadioGroup>
+            </FormControl>
+
+            <Button variant="contained" color="success" type="submit" fullWidth>
+              Sign Up
+            </Button>
+          </Box>
+        </CardContent>
+      </StyledCard>
+    );
   };
 
-  return (
-    <StyledCard>
-      <CardContent>
-        <Typography variant="h5" component="div" gutterBottom>
-          Sign Up
-        </Typography>
-        <Box
-          component="form"
-          noValidate
-          autoComplete="off"
-          onSubmit={handleSubmit}
-          sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
-        >
-          <TextField
-            required
-            type="email"
-            label="Email"
-            variant="outlined"
-            fullWidth
-          />
-          <TextField
-            required
-            type="text"
-            label="Password"
-            variant="outlined"
-            fullWidth
-          />
-
-          <FormControl component="fieldset">
-            <FormLabel color='black' component="legend">Role</FormLabel>
-            <RadioGroup
-              name="role"
-              value={role}
-              onChange={handleRoleChange}
-              row
-            >
-              <FormControlLabel value="farmer" control={<Radio color='success' />} label="Farmer" />
-              <FormControlLabel value="seller" control={<Radio color='success' />} label="Seller" />
-            </RadioGroup>
-          </FormControl>
-
-          <Button variant="contained" color="success" type="submit" fullWidth>
-            Sign Up
-          </Button>
-        </Box>
-      </CardContent>
-    </StyledCard>
-  );
-};
-
-export default SignUpCard;
+  export default SignUpCard;
