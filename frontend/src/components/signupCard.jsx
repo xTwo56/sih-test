@@ -45,7 +45,7 @@ const SignUpCard = () => {
         email,
         password,
         role
-      });
+      }, { withCredentials: true });
 
       (role == 'farmer') ? navigate("/farmer-details") : navigate("/buyer-details")
 

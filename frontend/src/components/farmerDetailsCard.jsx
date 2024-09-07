@@ -3,13 +3,14 @@ import { FiMessageSquare } from "react-icons/fi";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
 import axios from "axios"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 export const FarmerDetailCard = () => {
 
   async function getUser() {
 
+    const [userData, setUserData] = useState(null)
     const response = await axios.get("http://localhost:4000/api/getUserDetails", {
       withCredentials: true
     })
@@ -17,10 +18,12 @@ export const FarmerDetailCard = () => {
   }
 
   useEffect(() => {
-    getUser()
+    const response = getUser()
+
   }, [])
 
   return (
+
     <div className="flex ml-10 gap-10 max-h-screen  items-start w-1/4 mt-20">
       <div className="flex flex-col gap-8">
 
@@ -28,7 +31,7 @@ export const FarmerDetailCard = () => {
           <div className="border border-green-500 w-24 h-24 rounded-full flex items-center justify-center">
             <FaUser size={40} className="text-green-700" />
           </div>
-          <h2 className="text-lg font-semibold">Farmer Name</h2>
+          {<h2 className="text-lg font-semibold">Farmer Name</h2>
           <h2 className="text-gray-600">Farmer Address</h2>
         </div>
 
