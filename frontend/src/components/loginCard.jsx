@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 import axios from 'axios';
+import { useNavigate } from 'react-router';
 
 const StyledCard = styled(Card)({
   maxWidth: 400,
@@ -14,8 +15,8 @@ const StyledCard = styled(Card)({
   minHeight: 300,
   padding: '20px',
   boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-  margin: 'auto',  
-  marginTop: '100px',  
+  margin: 'auto',
+  marginTop: '100px',
 });
 
 const LoginCard = () => {
