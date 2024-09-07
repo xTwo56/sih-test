@@ -12,6 +12,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { styled } from '@mui/system';
 import { useState } from 'react';
+import axios from 'axios'; // Ensure axios is imported
 
 const StyledCard = styled(Card)({
   maxWidth: 400,
@@ -28,14 +29,14 @@ const SignUpCard = () => {
     setRole(event.target.value);
   };
 
-  const emailRef = useRef()
-  const passwordRef = useRef()
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     // Submission logic 
-    const email = emailRef.current.value
-    const password = passwordRef.current.value
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
 
     try {
       const response = await axios.post("http://localhost:4000/api/signup", {
@@ -46,62 +47,62 @@ const SignUpCard = () => {
 
       console.log("response: " + JSON.stringify(response));
     } catch (error) {
-      console.error("Error during login:", error);
-
+      console.error("Error during sign-up:", error);
       console.log("email: " + email);
-    };
-
-    return (
-      <StyledCard>
-        <CardContent>
-          <Typography variant="h5" component="div" gutterBottom>
-            Sign Up
-          </Typography>
-          <Box
-            component="form"
-            noValidate
-            autoComplete="off"
-            onSubmit={handleSubmit}
-            sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
-          >
-            <TextField
-              required
-              type="email"
-              label="Email"
-              variant="outlined"
-              inputRef={emailRef}
-              fullWidth
-            />
-
-            <TextField
-              required
-              type="text"
-              label="Password"
-              variant="outlined"
-              inputRef={passwordRef}
-              fullWidth
-            />
-
-            <FormControl component="fieldset">
-              <FormLabel color='black' component="legend">Role</FormLabel>
-              <RadioGroup
-                name="role"
-                value={role}
-                onChange={handleRoleChange}
-                row
-              >
-                <FormControlLabel value="farmer" control={<Radio color='success' />} label="Farmer" />
-                <FormControlLabel value="buyer" control={<Radio color='success' />} label="Buyer" />
-              </RadioGroup>
-            </FormControl>
-
-            <Button variant="contained" color="success" type="submit" fullWidth>
-              Sign Up
-            </Button>
-          </Box>
-        </CardContent>
-      </StyledCard>
-    );
+    }
   };
 
-  export default SignUpCard;
+  return (
+    <StyledCard>
+      <CardContent>
+        <Typography variant="h5" component="div" gutterBottom>
+          Sign Up
+        </Typography>
+        <Box
+          component="form"
+          noValidate
+          autoComplete="off"
+          onSubmit={handleSubmit}
+          sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
+        >
+          <TextField
+            required
+            type="email"
+            label="Email"
+            variant="outlined"
+            inputRef={emailRef}
+            fullWidth
+          />
+
+          <TextField
+            required
+            type="password" // Change this to password for proper input type
+            label="Password"
+            variant="outlined"
+            inputRef={passwordRef}
+            fullWidth
+          />
+
+          <FormControl component="fieldset">
+            <FormLabel component="legend">Role</FormLabel>
+            <RadioGroup
+              name="role"
+              value={role}
+              onChange={handleRoleChange}
+              row
+            >
+              <FormControlLabel value="farmer" control={<Radio color='success' />} label="Farmer" />
+              <FormControlLabel value="buyer" control={<Radio color='success' />} label="Buyer" />
+            </RadioGroup>
+          </FormControl>
+
+          <Button variant="contained" color="success" type="submit" fullWidth>
+            Sign Up
+          </Button>
+        </Box>
+      </CardContent>
+    </StyledCard>
+  );
+}
+
+export default SignUpCard;

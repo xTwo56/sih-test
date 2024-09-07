@@ -50,7 +50,7 @@ function Listing() {
             className="w-full h-60 md:h-auto mb-4 rounded-lg shadow-lg object-cover"
           />
           <div className="bg-[#f9f9f9] p-4 rounded-lg shadow-sm">
-            <h2 className="text-lg font-semibold">Dealer's Contact Details</h2>
+            <h2 className="text-lg font-semibold">Dealers Contact Details</h2>
             <article className="text-base text-[#4a4a4a]">
               <p>Name: Satya Pal Singh</p>
               <p>Phone Number: +917894561237</p>
