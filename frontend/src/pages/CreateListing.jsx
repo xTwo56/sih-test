@@ -61,11 +61,12 @@ const CreateListing = () => {
           <form onSubmit={handleSubmit}>
             {/* Crop Name Input */}
             <div className="mb-3">
-              <label className="block text-sm font-medium text-gray-700">Name of Crop:</label>
+              <label className="block text-sm  font-medium text-gray-700">Name of Crop:</label>
               <input
                 type="text"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
+                className="mt-1 p-2 block text-center w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
                 value={cropName}
+                 placeholder='Wheat'
                 onChange={(e) => setCropName(e.target.value)}
                 required
               />
@@ -85,11 +86,12 @@ const CreateListing = () => {
 
             {/* Price Input */}
             <div className="mb-3">
-              <label className="block text-sm font-medium text-gray-700">Price of Crop:</label>
+              <label className="block  text-sm font-medium text-gray-700">Price of Crop (In Lacks) :</label>
               <input
                 type="number"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
+                className="mt-1 p-2 block text-center w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
                 value={price}
+                 placeholder='20 '
                 onChange={(e) => setPrice(e.target.value)}
                 required
               />
@@ -97,11 +99,12 @@ const CreateListing = () => {
 
             {/* Amount Input */}
             <div className="mb-3">
-              <label className="block text-sm font-medium text-gray-700">Amount of Crop:</label>
+              <label className="block text-center text-sm font-medium text-gray-700">Amount of Crop (In Kg) :</label>
               <input
                 type="number"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
+                className="mt-1 p-2 block text-center w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
                 value={amount}
+                placeholder='10 '
                 onChange={(e) => setAmount(e.target.value)}
                 required
               />
@@ -112,8 +115,9 @@ const CreateListing = () => {
               <label className="block text-sm font-medium text-gray-700">Date of Harvest:</label>
               <input
                 type="date"
-                className="mt-1 p-2 block w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
+                className="mt-1 p-2 block text-center w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 transition duration-200 shadow-sm"
                 value={date}
+                 
                 onChange={(e) => setDate(e.target.value)}
                 required
               />
