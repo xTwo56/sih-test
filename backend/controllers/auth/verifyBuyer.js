@@ -1,6 +1,6 @@
 //authenticateUser
-
 const User = require("../../models/user")
+const Buyer = require("../../models/buyer")
 
 exports.verifyBuyer = async (req, res) => {
   try {
@@ -17,7 +17,7 @@ exports.verifyBuyer = async (req, res) => {
     }
     const userId = req.userId
 
-    await User.update(
+    await User.updateOne(
       { _id: userId },
       {
         $set: {

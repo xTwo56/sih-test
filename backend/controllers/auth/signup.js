@@ -5,14 +5,15 @@ const JWT_SECRET = process.env.JWT_SECRET
 
 exports.signup = async (req, res) => {
   try {
-    const { email, password } = req.body
+    const { email, password, role } = req.body
     console.log("email" + email)
     const existingUser = await User.findOne({ email })
 
     if (!existingUser) {
       let user = await User.create({
         email,
-        password
+        password,
+        role
       })
 
       const token = jwt.sign(
