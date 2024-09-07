@@ -13,6 +13,7 @@ import FormLabel from '@mui/material/FormLabel';
 import { styled } from '@mui/system';
 import { useState } from 'react';
 import axios from 'axios'; // Ensure axios is imported
+import { useNavigate } from 'react-router-dom';
 
 const StyledCard = styled(Card)({
   maxWidth: 400,
@@ -23,6 +24,7 @@ const StyledCard = styled(Card)({
 });
 
 const SignUpCard = () => {
+  const navigate = useNavigate()
   const [role, setRole] = useState('buyer');
 
   const handleRoleChange = (event) => {
@@ -44,6 +46,8 @@ const SignUpCard = () => {
         password,
         role
       });
+
+      (role == 'farmer') ? navigate("/farmer-details") : navigate("/buyer-details")
 
       console.log("response: " + JSON.stringify(response));
     } catch (error) {

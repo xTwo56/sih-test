@@ -2,9 +2,11 @@ import { CropDetails } from "../components/cropDetails";
 import { FarmerDetailCard } from "../components/farmerDetailsCard";
 
 export const FarmerDetails = () => {
+
   return (
+
     <div className="flex h-screen">
-     
+
       <div className="shadow-xl w-1/5">
         <FarmerDetailCard />
       </div>
@@ -17,4 +19,10 @@ export const FarmerDetails = () => {
       </div>
     </div>
   );
-};
+
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+}

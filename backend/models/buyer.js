@@ -1,4 +1,4 @@
-import { listingSchema } from "./listings"
+const { listingSchema } = require("./listings")
 
 const mongoose = require("mongoose")
 
