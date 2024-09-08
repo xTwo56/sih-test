@@ -4,10 +4,12 @@ const User = require("../../models/user")
 
 exports.verifyFarmer = async (req, res) => {
   try {
+    console.log("verify farmer")
     const farmerData = req.body
-    console.log("farmerData: " + JSON.stringify(farmerData))
+    console.log("verify farmer farmerData: " + JSON.stringify(farmerData))
 
     const verifiedFarmer = await Farmer.create(farmerData)
+    console.log("verifiedFarmer: " + verifiedFarmer)
 
     if (!verifiedFarmer) {
       return res.status(400).json({

@@ -19,7 +19,12 @@ const farmerSchema = mongoose.Schema({
     required: true
   },
 
-  fid: {
+  fId: {
+    type: String,
+    required: true
+  },
+
+  aadharId: {
     type: String,
     required: true
   },
