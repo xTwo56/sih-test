@@ -6,7 +6,6 @@ const JWT_SECRET = process.env.JWT_SECRET
 exports.signup = async (req, res) => {
   try {
     const { email, password, role } = req.body
-    console.log("email" + email)
     const existingUser = await User.findOne({ email })
 
     if (!existingUser) {
@@ -21,6 +20,7 @@ exports.signup = async (req, res) => {
         JWT_SECRET,
         { expiresIn: '1h' }
       )
+
       console.log("token creation" + token)
 
       res.cookie('token', token, {
@@ -28,9 +28,12 @@ exports.signup = async (req, res) => {
         maxAge: 3600000
       })
 
+      console.log("userId: " + user._id)
+
       return res.status(200).json({
         success: true,
-        msg: "user created"
+        msg: "user created",
+        userId: user._id,
       })
     }
 
