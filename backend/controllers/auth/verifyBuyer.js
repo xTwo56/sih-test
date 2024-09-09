@@ -7,7 +7,7 @@ exports.verifyBuyer = async (req, res) => {
     const buyerData = req.body
     console.log("buyerData: " + buyerData)
 
-    const verifiedBuyer = await Buyer.create({ buyerData })
+    const verifiedBuyer = await Buyer.create(buyerData)
 
     if (!verifiedBuyer) {
       return res.status(400).json({
